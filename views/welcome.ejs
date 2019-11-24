@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hayden Coffee House</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css" />
+  </head>
+  <h1 class="primary">Hayden Coffee House</h1>
+  <body>
+    <div class="row mt-5">
+      <div class="col-md-6 m-auto">
+        <form action="/submitOrder" method="post">
+          <input type="checkbox" name="order" value="Coffee"> Coffee</input><br>
+          <input type="checkbox" name="order" value="Espresso"> Espresso</input><br>
+          <input type="checkbox" name="order" value="Latte"> Latte</input><br>
+          <input type="checkbox" name="order" value="Cappuccino"> Cappuccino</input><br>
+          <input type="checkbox" name="order" value="Tea"> Tea</input><br>
+          <input type="checkbox" name="order" value="Cold Brew"> Kopi Luwak</input><br>
+          <input type="text" class="name" name="name" placeholder="name">
+          <input class="submit btn btn-primary btn-block mb-2" type="submit"></input>
+        </form>
+        <ul class="orders"></ul>
+      </div>
+      <div class="col-md-6 m-auto">
+        <div class="card card-body text-center">
+          <p>Create an account or login</p>
+          <a href="/users/register" class="btn btn-primary btn-block mb-2">Register</a>
+          <a href="/users/login" class="btn btn-secondary btn-block">Login</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= user.name %></p>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<br>
+
+<h2>Incomplete</h2>
+<% orders.forEach((order) => { %>
+  <% if (order.completed === false) { %>
+    <h5><%= order.name %></h5>
+      <% order.order.forEach((each) => { %>
+        <ul>
+          <li>
+            <%= each %>
+          </li>
+        </ul>
+      <% }) %>
+      <button class="complete btn btn-primary" id="update" type="button" name="button">Complete</button>
+    <% } %>
+<% }) %>
+
+
+
+<h2>Completed</h2>
+<% orders.forEach((order) => { %>
+  <% if (order.completed === true) { %>
+  <p>
+    <%= order.name %>
+    <% order.order.forEach((each) => { %>
+      <ul>
+        <li>
+          <%= each %>
+        </li>
+      </ul>
+    <% }) %>
+  </p>
+  <% } %>
+<% }) %>
